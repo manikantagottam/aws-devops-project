@@ -1,0 +1,101 @@
+[3:21 PM, 5/19/2026] Mani Anna♥️: # 🚀 Full Stack DevOps Project with Jenkins, Docker & Monitoring
+
+This project demonstrates a complete DevOps workflow with CI/CD using Jenkins, containerization using Docker, and monitoring using Prometheus & Grafana.
+
+---
+
+## 📌 Project Overview
+
+This is a simple full-stack application:
+
+* Backend → Node.js + Express  
+* Frontend → Nginx (Static HTML)  
+* CI/CD → Jenkins Pipeline  
+* Containerization → Docker & Docker Compose  
+* Monitoring → Prometheus + Grafana + cAdvisor  
+
+---
+
+## 🛠️ Technologies Used
+
+- Node.js  
+- Express.js  
+- Docker  
+- Docker Compose  
+- Jenkins  
+- Prometheus  
+- Grafana  
+- cAdvisor  
+- GitHub  
+
+---
+
+## 📂 Project Structure
+
+aws-devops-project
+│
+├── backend
+│   ├── Dockerfile
+│   ├── package.json
+│   └── index.js
+│
+├── frontend
+│   ├── Dockerfile
+│   └── index.html
+│
+├── prometheus
+│   └── prometheus.yml
+│
+├── docker-compose.yml
+└── Jenkinsfile
+
+---
+
+## ⚙️ Features
+
+✔️ Backend API running on Node.js  
+✔️ Frontend served using Nginx  
+✔️ Multi-container setup using Docker Compose  
+✔️ Jenkins CI/CD Pipeline automation  
+✔️ Docker Hub image push  
+✔️ Monitoring using Prometheus  
+✔️ Visualization using Grafana  
+✔️ Container metrics using cAdvisor  
+
+---
+
+## 🔄 Jenkins CI/CD Pipeline
+
+Jenkins automatically performs:
+
+1️⃣ Pull code from GitHub  
+2️⃣ Build Docker images  
+3️⃣ Push images to Docker Hub  
+4️⃣ Deploy containers using Docker Compose  
+
+---
+
+## ▶️ Run Project Locally
+
+### Step 1 — Clone Repo
+git clone <your-repo-url>
+
+### Step 2 — Run Containers
+docker-compose up --build
+
+---
+
+## 🌐 Application URLs
+
+Frontend → http://localhost  
+Backend → http://localhost:3000  
+Prometheus → http://localhost:9090  
+Grafana → http://localhost:3001  
+cAdvisor → http://localhost:8080  
+
+---
+
+## 👨‍💻 Author
+
+Manikanta Gottam  
+Aspiring AWS DevOps Engineer 
