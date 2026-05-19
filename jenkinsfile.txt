@@ -1,0 +1,37 @@
+pipeline {
+  agent any
+
+  stages {
+    stage('Checkout') {
+      steps {
+        git 'https://github.com/your-username/aws-devops-project.git'
+      }
+    }
+
+    stage('Build Docker Images') {
+      steps {
+        sh 'docker-compose build'
+      }
+    }
+
+    stage('Push to Docker Hub') {
+      steps {
+        withCredentials([string(credentialsId: 'dockerhub-token', variable: 'DOCKERHUB_TOKEN')]) {
+          sh '''
+            echo "$DOCKERHUB_TOKEN" | docker login -u your-dockerhub-username --password-stdin
+            docker tag myproject_backend your-dockerhub-username/myproject_backend:latest
+            docker tag myproject_frontend your-dockerhub-username/myproject_frontend:latest
+            docker push your-dockerhub-username/myproject_backend:latest
+            docker push your-dockerhub-username/myproject_frontend:latest
+          '''
+        }
+      }
+    }
+
+    stage('Deploy') {
+      steps {
+        sh 'docker-compose down && docker-compose up -d'
+      }
+    }
+  }
+}
